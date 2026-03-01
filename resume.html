@@ -1,0 +1,893 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resume Builder Ultra Pro Max</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<style>
+
+
+
+/* ===== Animated Gradient Background ===== */
+
+body{
+
+margin:0;
+
+font-family:Poppins;
+
+background:linear-gradient(
+-45deg,
+#0f172a,
+#020617,
+#0ea5e9,
+#020617
+);
+
+background-size:400% 400%;
+
+animation:gradientMove 12s ease infinite;
+
+}
+
+
+@keyframes gradientMove{
+
+0%{background-position:0% 50%}
+
+50%{background-position:100% 50%}
+
+100%{background-position:0% 50%}
+
+}
+
+
+/* Floating Glow Circles */
+
+body::before,
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:300px;
+height:300px;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+z-index:-1;
+
+animation:float 10s infinite alternate;
+
+}
+
+body::before{
+
+background:#38bdf8;
+
+top:10%;
+left:10%;
+
+}
+
+body::after{
+
+background:#7c3aed;
+
+bottom:10%;
+right:10%;
+
+}
+
+@keyframes float{
+
+from{transform:translateY(0)}
+
+to{transform:translateY(80px)}
+
+}
+
+`css
+/* ============================= */
+/* NEW ANIMATED BACKGROUND */
+/* ============================= */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:100%;
+height:100%;
+
+background:
+
+radial-gradient(circle at 20% 30%,#38bdf830,transparent),
+
+radial-gradient(circle at 80% 70%,#7c3aed30,transparent);
+
+z-index:-1;
+
+animation:bgFloat 10s infinite alternate;
+
+}
+
+@keyframes bgFloat{
+
+from{transform:translateY(-20px)}
+
+to{transform:translateY(20px)}
+
+}
+
+
+/* ============================= */
+/* TEMPLATE TRANSITIONS */
+/* ============================= */
+
+.resume{
+
+transition:all .6s ease;
+
+}
+
+.resume:hover{
+
+transform:scale(1.01);
+
+}
+
+
+/* ============================= */
+/* NEW TEMPLATE 6 */
+/* MINIMAL WHITE */
+/* ============================= */
+
+.template6{
+
+background:#ffffff;
+
+color:#111;
+
+font-family:Arial;
+
+box-shadow:0 0 30px #0001;
+
+}
+
+
+/* ============================= */
+/* TEMPLATE 7 */
+/* GLASS */
+/* ============================= */
+
+.template7{
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(20px);
+
+color:white;
+
+border:1px solid #fff3;
+
+}
+
+
+/* ============================= */
+/* TEMPLATE 8 */
+/* SIDEBAR */
+/* ============================= */
+
+.template8{
+
+background:linear-gradient(to right,#1e293b 30%,white 30%);
+
+color:black;
+
+}
+
+
+/* ============================= */
+/* TEMPLATE 9 */
+/* ATS CLEAN */
+/* ============================= */
+
+.template9{
+
+background:white;
+
+color:black;
+
+font-family:Times New Roman;
+
+line-height:1.6;
+
+}
+
+
+/* ============================= */
+/* TEMPLATE 10 */
+/* PREMIUM GRADIENT */
+/* ============================= */
+
+.template10{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#667eea,
+
+#764ba2);
+
+color:white;
+
+}
+
+
+/* ============================= */
+/* HOVER EFFECTS */
+/* ============================= */
+
+.resume h3:hover{
+
+letter-spacing:2px;
+
+transition:.3s;
+
+color:#38bdf8;
+
+}
+
+
+/* ============================= */
+/* IMAGE HOVER */
+/* ============================= */
+
+#rphoto:hover{
+
+transform:scale(1.1) rotate(3deg);
+
+transition:.4s;
+
+}
+
+
+/* ============================= */
+/* BUTTON GLOW */
+/* ============================= */
+
+button:hover{
+
+box-shadow:
+
+0 0 10px #38bdf8,
+
+0 0 20px #38bdf8;
+
+}
+
+
+/* ============================= */
+/* SMOOTH LOAD */
+/* ============================= */
+
+.resume{
+
+animation:resumeEntry .8s ease;
+
+}
+
+@keyframes resumeEntry{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+}
+```
+
+
+
+
+
+
+
+
+
+body{
+margin:0;
+font-family:Poppins;
+background:linear-gradient(120deg,#0f172a,#020617);
+transition:.5s;
+animation:bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove{
+from{background-position:left;}
+to{background-position:right;}
+}
+
+.container{
+display:flex;
+gap:20px;
+padding:20px;
+flex-wrap:wrap;
+}
+
+/* FORM */
+
+.form{
+flex:1;
+min-width:320px;
+background:#020617;
+color:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 20px #38bdf8;
+animation:slideLeft 1s;
+}
+
+@keyframes slideLeft{
+from{transform:translateX(-50px);opacity:0;}
+}
+
+/* RESUME */
+
+.resume{
+flex:1;
+min-width:320px;
+padding:30px;
+border-radius:10px;
+transition:.5s;
+animation:fadeUp 1s;
+}
+
+@keyframes fadeUp{
+from{transform:translateY(40px);opacity:0;}
+}
+
+/* INPUT */
+
+input,textarea,select{
+width:100%;
+padding:10px;
+margin:6px 0;
+border-radius:6px;
+border:none;
+transition:.3s;
+}
+
+input:focus, textarea:focus{
+transform:scale(1.03);
+box-shadow:0 0 10px #38bdf8;
+}
+
+/* BUTTON */
+
+button{
+width:100%;
+padding:12px;
+margin-top:8px;
+border:none;
+cursor:pointer;
+font-weight:bold;
+border-radius:6px;
+background:#38bdf8;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #38bdf8;
+}
+
+/* IMAGE */
+
+img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+animation:zoom 1s;
+}
+
+@keyframes zoom{
+from{transform:scale(.5);opacity:0;}
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+/* SECTION ANIMATION */
+
+.resume h3{
+border-bottom:2px solid currentColor;
+padding-bottom:5px;
+animation:fadeIn 1s;
+}
+
+.resume p{
+animation:fadeIn 1.5s;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateX(-20px);}
+}
+
+/* SKILL BAR */
+
+.skillbar{
+background:#ddd;
+border-radius:20px;
+margin:5px 0;
+}
+
+.skillfill{
+height:10px;
+background:#38bdf8;
+border-radius:20px;
+animation:fill 2s;
+}
+
+@keyframes fill{
+from{width:0;}
+}
+
+/* TEMPLATES */
+
+.template1{
+background:white;
+color:black;
+}
+
+.template2{
+background:#020617;
+color:#38bdf8;
+}
+
+.template3{
+background:linear-gradient(to right,#fdfbfb,#ebedee);
+}
+
+.template4{
+background:linear-gradient(120deg,#84fab0,#8fd3f4);
+}
+
+.template5{
+background:black;
+color:#facc15;
+}
+
+/* ============================= */
+/* PROFESSIONAL FOOTER */
+/* ============================= */
+
+.resume-footer{
+
+position:fixed;
+
+bottom:0;
+
+width:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#020617,
+
+#0f172a,
+
+#020617);
+
+color:#94a3b8;
+
+text-align:center;
+
+padding:12px;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+border-top:1px solid #38bdf840;
+
+backdrop-filter:blur(10px);
+
+animation:footerFade 1.5s;
+
+}
+
+
+/* content layout */
+
+.footer-content{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+
+/* highlight */
+
+.footer-highlight{
+
+color:#38bdf8;
+
+font-weight:600;
+
+}
+
+
+/* divider */
+
+.footer-divider{
+
+color:#38bdf870;
+
+}
+
+
+/* animation */
+
+@keyframes footerFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+/* hover glow */
+
+.resume-footer:hover{
+
+box-shadow:
+
+0 0 15px #38bdf8;
+
+transition:.4s;
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="form">
+
+<h2>Resume Builder</h2>
+
+<input type="file" id="photo">
+
+<input id="name" placeholder="Full Name">
+
+<input id="email" placeholder="Email">
+
+<input id="phone" placeholder="Phone">
+
+<textarea id="about" placeholder="About Me"></textarea>
+
+<textarea id="education" placeholder="Education"></textarea>
+
+<textarea id="experience" placeholder="Experience"></textarea>
+
+<textarea id="techskills" placeholder="Technical Skills"></textarea>
+
+<textarea id="softskills" placeholder="Soft Skills"></textarea>
+
+<textarea id="internship" placeholder="Internship"></textarea>
+
+<textarea id="achievements" placeholder="Achievements"></textarea>
+
+<select id="template">
+
+<option value="1">Corporate</option>
+<option value="2">Modern Dark</option>
+<option value="3">Elegant</option>
+<option value="4">Creative</option>
+<option value="5">Luxury</option>
+<option value="6">Minimal White</option>
+
+<option value="7">Glass</option>
+
+<option value="8">Sidebar</option>
+
+<option value="9">ATS Professional</option>
+
+<option value="10">Premium Gradient</option>
+
+</select>
+
+<button onclick="generate()">Generate</button>
+
+<button onclick="download()">Download PDF</button>
+
+<button onclick="saveResume()">Save</button>
+
+<button onclick="loadResume()">Load</button>
+
+</div>
+
+
+<div class="resume template1" id="resume">
+
+<div class="header">
+
+<img id="rphoto">
+
+<div>
+
+<h1 id="rname">Your Name</h1>
+
+<p id="remail"></p>
+
+<p id="rphone"></p>
+
+</div>
+
+</div>
+
+
+<h3>About Me</h3>
+<p id="rabout"></p>
+
+<h3>Education</h3>
+<p id="reducation"></p>
+
+<h3>Experience</h3>
+<p id="rexperience"></p>
+
+<h3>Technical Skills</h3>
+<div id="rtechskills"></div>
+
+<h3>Soft Skills</h3>
+<p id="rsoftskills"></p>
+
+<h3>Internship</h3>
+<p id="rinternship"></p>
+
+<h3>Achievements</h3>
+<p id="rachievements"></p>
+
+</div>
+
+</div>
+
+<footer class="resume-footer">
+
+<div class="footer-content">
+
+<span>© 2026 Joy Xavier</span>
+
+<span class="footer-divider">|</span>
+
+<span>Resume Builder </span>
+
+<span class="footer-divider">|</span>
+
+<span class="footer-highlight">Portfolio Project</span>
+
+</div>
+
+</footer>
+<script>
+
+function generate(){
+
+let file=photo.files[0];
+
+if(file){
+
+let reader=new FileReader();
+
+reader.onload=()=>rphoto.src=reader.result;
+
+reader.readAsDataURL(file);
+
+}
+
+rname.textContent=name.value;
+remail.textContent=email.value;
+rphone.textContent=phone.value;
+rabout.textContent=about.value;
+reducation.textContent=education.value;
+rexperience.textContent=experience.value;
+
+createSkillBars(techskills.value);
+
+rsoftskills.textContent=softskills.value;
+rinternship.textContent=internship.value;
+rachievements.textContent=achievements.value;
+
+resume.className="resume template"+template.value;
+
+saveResume();
+
+}
+
+function createSkillBars(skills){
+
+let html="";
+
+skills.split(",").forEach(skill=>{
+
+html+=`
+
+<div>${skill}
+
+<div class="skillbar">
+
+<div class="skillfill" style="width:${Math.random()*100}%"></div>
+
+</div>
+
+</div>`;
+
+});
+
+rtechskills.innerHTML=html;
+
+}
+
+/* SAVE */
+
+function saveResume(){
+
+let data={
+
+name:name.value,
+email:email.value,
+phone:phone.value,
+about:about.value,
+education:education.value,
+experience:experience.value,
+techskills:techskills.value,
+softskills:softskills.value,
+internship:internship.value,
+achievements:achievements.value,
+template:template.value
+
+};
+
+localStorage.setItem("resumeData",JSON.stringify(data));
+
+}
+
+/* LOAD */
+
+function loadResume(){
+
+let data=JSON.parse(localStorage.getItem("resumeData"));
+
+if(data){
+
+name.value=data.name;
+email.value=data.email;
+phone.value=data.phone;
+about.value=data.about;
+education.value=data.education;
+experience.value=data.experience;
+techskills.value=data.techskills;
+softskills.value=data.softskills;
+internship.value=data.internship;
+achievements.value=data.achievements;
+template.value=data.template;
+
+generate();
+
+}
+
+}
+
+/* AUTO LOAD */
+
+window.onload=loadResume;
+
+/* DOWNLOAD */
+
+function download(){
+
+// ensure latest content
+generate();
+
+// small delay so DOM fully renders
+setTimeout(()=>{
+
+const element = document.getElementById("resume");
+
+const opt = {
+
+margin:0,
+
+filename:"Joy_Xavier_Resume.pdf",
+
+image:{
+
+type:'jpeg',
+quality:1
+
+},
+
+html2canvas:{
+
+scale:3,
+useCORS:true,
+letterRendering:true
+
+},
+
+jsPDF:{
+
+unit:'mm',
+format:'a4',
+orientation:'portrait'
+
+}
+
+};
+
+// force white background for PDF
+element.style.background="white";
+element.style.color="black";
+
+html2pdf().set(opt).from(element).save();
+
+},500);
+
+}
+
+
+
+</script>
+
+</body>
+</html>
+```
